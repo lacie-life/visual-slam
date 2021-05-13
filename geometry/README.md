@@ -13,3 +13,8 @@
 • Affine transform ( 4 × 4 ): Eigen::Affine3d.
 
 • Perspective transformation ( 4 × 4 ): Eigen::Projective3d.
+
+
+### ![Example 1](https://github.com/lacie-life/visual-slam/blob/master/geometry/images/example-1.png?raw=true)
+
+
