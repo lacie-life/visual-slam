@@ -62,11 +62,17 @@ int main() {
     // The basic operations are not demonstrated, just use +−∗/ operators.
     matrix_33 = Matrix3d::Random();  // random number matrix
     cout << "random matrix: \n" << matrix_33 << endl;
+
+    // https://en.wikipedia.org/wiki/Transpose
     cout << "transpose: \n" << matrix_33.transpose() << endl;
     cout << "sum: " << matrix_33.sum() << endl;
     cout << "trace: " << matrix_33.trace() << endl;
     cout << "times 10: \n" << 10 * matrix_33 << endl;
+
+    // https://www.mathsisfun.com/algebra/matrix-inverse.html
     cout << "inverse: \n" << matrix_33.inverse() << endl;
+
+    // https://www.mathsisfun.com/algebra/matrix-determinant.html
     cout << "det: " << matrix_33.determinant() << endl;
 
     // Eigenvalues
