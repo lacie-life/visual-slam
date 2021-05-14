@@ -11,3 +11,5 @@ include_directories( ${Sophus_INCLUDE_DIRS} ) # sohpus is header only
 
 add_executable(useSophus useSophus.cpp)
 target_link_libraries(useSophus Sophus::Sophus)
+
+add_subdirectory(example)
