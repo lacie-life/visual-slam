@@ -16,7 +16,7 @@
 
 
 ### Example 1 
-![Example 1](https://github.com/lacie-life/visual-slam/blob/master/geometry/images/example-1.png?raw=true)
+![Example 1](https://github.com/lacie-life/visual-slam/blob/main/geometry/images/example-1.png?raw=true)
 
 ## Visualize Geometry Example
 1. How to compile this program:
@@ -24,26 +24,26 @@
 * use pangolin: slambook/3rdpart/Pangolin or download it from github: https://github.com/stevenlovegrove/Pangolin
 
 * install dependency for pangolin (mainly the OpenGL):
-'''
+```
   sudo apt-get install libglew-dev
-'''
+```
 
 * compile and install pangolin
-'''
+```
   cd Pangolin
   mkdir build
   cd build
   cmake ..
   make
   sudo make install
-'''
+```
 * compile this program:
-'''
+```
   mkdir build
   cd build
   cmake ..
   make
-'''
+```
 * run the build/visualizeGeometry
 
 2. How to use this program:
