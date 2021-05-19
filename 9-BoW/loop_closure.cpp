@@ -12,8 +12,8 @@ using namespace std;
 int main(int argc, char **argv) {
     // read the images and database  
     cout << "reading database" << endl;
-    //DBoW3::Vocabulary vocab("vocabulary.yml.gz");
-    DBoW3::Vocabulary vocab("../vocab_larger.yml.gz");  // use large vocab if you want: 
+    DBoW3::Vocabulary vocab("vocabulary.yml.gz");
+    // DBoW3::Vocabulary vocab("../vocab_larger.yml.gz");  // use large vocab if you want: 
     if (vocab.empty()) {
         cerr << "Vocabulary does not exist." << endl;
         return 1;

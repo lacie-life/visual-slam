@@ -4,7 +4,7 @@ project( loop_closure )
 set(CMAKE_CXX_STANDARD 14)
 
 # opencv 
-find_package( OpenCV 3.1 REQUIRED )
+find_package( OpenCV 4.2 REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 # dbow3 
