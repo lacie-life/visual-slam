@@ -13,7 +13,7 @@ multiple times, we use the triangulation method to calculate its 3D position,
 which forms the landmarks or map points.
 - Relationship: 
 
-![Data relationship](https://github.com/lacie-life/visual-slam/blob/main/practice/resources/data_relationship.png?raw=true)
+![Data relationship](https://github.com/lacie-life/visual-slam/blob/main/SLAM-Theory/practice/resources/data_relationship.png?raw=true)
 
 #### frame.h and frame.cpp
 #### feature.h and feature.cpp
@@ -40,7 +40,7 @@ range and cannot keep growing over time.
 routine and then resets the map scale. The old keyframes and map points are
 removed if necessary. 
 
-![Pipeline](https://github.com/lacie-life/visual-slam/blob/main/practice/resources/pipeline.png?raw=true)
+![Pipeline](https://github.com/lacie-life/visual-slam/blob/main/SLAM-Theory/practice/resources/pipeline.png?raw=true)
 
 ###  Peripheral modules
 
