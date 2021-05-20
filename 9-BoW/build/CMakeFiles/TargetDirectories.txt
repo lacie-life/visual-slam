@@ -1,0 +1,5 @@
+/home/lacie/Github/visual-slam/9-BoW/build/CMakeFiles/rebuild_cache.dir
+/home/lacie/Github/visual-slam/9-BoW/build/CMakeFiles/edit_cache.dir
+/home/lacie/Github/visual-slam/9-BoW/build/CMakeFiles/gen_vocab.dir
+/home/lacie/Github/visual-slam/9-BoW/build/CMakeFiles/feature_training.dir
+/home/lacie/Github/visual-slam/9-BoW/build/CMakeFiles/loop_closure.dir
