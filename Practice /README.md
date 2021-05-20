@@ -11,7 +11,7 @@ multiple times, we use the triangulation method to calculate its 3D position,
 which forms the landmarks or map points.
 - Relationship: 
 
-![Data relationship](https://github.com/lacie-life/visual-slam/blob/master/Practice/resourses/data_relationship.png?raw=true)
+![Data relationship](https://github.com/lacie-life/visual-slam/blob/master/Practice/resources/data_relationship.png?raw=true)
 
 2. Pipeline
 
@@ -33,7 +33,7 @@ range and cannot keep growing over time.
 routine and then resets the map scale. The old keyframes and map points are
 removed if necessary. 
 
-![Pipeline](https://github.com/lacie-life/visual-slam/blob/master/Practice/resours/pipeline.png?raw=true)
+![Pipeline](https://github.com/lacie-life/visual-slam/blob/master/Practice/resourc/pipeline.png?raw=true)
 
 ###  Peripheral modules
 
