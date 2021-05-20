@@ -59,14 +59,18 @@ Otherwise, we have to scratch our heads against a series of numeric values.
 
 -- The frontend has three states: initialization, normal tracking, and tracking
 lost
+
 -- In the initialization state, we do the triangulation according to the optical flow
 matching between the left and right eyes. We will establish the initial map
 when successful.
+
 -- In the tracking phase, the front end calculates the optical flow from the previous frame to the current frame and estimates the image pose based on the
 optical flow result. This optical flow is used only for the left eye image to save
 the computation resource.
+
 -- If the tracked features are fewer than a threshold, we set the current frame as
 a keyframe. For keyframes, do the following things:
+
 + Extract new feature points;
 + Find the corresponding points of these points on the right, and use triangulation to create new landmarks;
 + Add new keyframes and landmarks to the map and trigger a backend
@@ -77,6 +81,7 @@ optimization.
 
 -- After the backend is started, it will wait for the condition variable of map_
 update_. 
+
 -- When the map update is triggered, take the activated keyframes and map
 points from the map and perform optimization
 
