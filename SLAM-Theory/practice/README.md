@@ -87,9 +87,19 @@ points from the map and perform optimization
 
 5. Q&A
 
-GTest Error:
+- GTest Error:
 
 https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+
+- shared_ptr and weak_ptr
+
+https://www.learncpp.com/cpp-tutorial/circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr/
+
+In short, the frame holds the shared_ptr of feature, so we should avoid the feature holding
+frame’s shared_ptr again. Otherwise, the two structs refer to each other, which will cause the
+smart pointer to fail to be automatically destructed.
+
+
 
 
 
