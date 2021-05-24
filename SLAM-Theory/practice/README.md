@@ -13,7 +13,7 @@ multiple times, we use the triangulation method to calculate its 3D position,
 which forms the landmarks or map points.
 - Relationship: 
 
-![Data relationship](https://github.com/lacie-life/visual-slam/blob/main/practice/resources/data_relationship.png?raw=true)
+![Data relationship](https://github.com/lacie-life/visual-slam/blob/main/SLAM-Theory/practice/resources/data_relationship.png?raw=true)
 
 #### frame.h and frame.cpp
 #### feature.h and feature.cpp
@@ -40,7 +40,7 @@ range and cannot keep growing over time.
 routine and then resets the map scale. The old keyframes and map points are
 removed if necessary. 
 
-![Pipeline](https://github.com/lacie-life/visual-slam/blob/main/practice/resources/pipeline.png?raw=true)
+![Pipeline](https://github.com/lacie-life/visual-slam/blob/main/SLAM-Theory/practice/resources/pipeline.png?raw=true)
 
 ###  Peripheral modules
 
@@ -59,14 +59,18 @@ Otherwise, we have to scratch our heads against a series of numeric values.
 
 -- The frontend has three states: initialization, normal tracking, and tracking
 lost
+
 -- In the initialization state, we do the triangulation according to the optical flow
 matching between the left and right eyes. We will establish the initial map
 when successful.
+
 -- In the tracking phase, the front end calculates the optical flow from the previous frame to the current frame and estimates the image pose based on the
 optical flow result. This optical flow is used only for the left eye image to save
 the computation resource.
+
 -- If the tracked features are fewer than a threshold, we set the current frame as
 a keyframe. For keyframes, do the following things:
+
 + Extract new feature points;
 + Find the corresponding points of these points on the right, and use triangulation to create new landmarks;
 + Add new keyframes and landmarks to the map and trigger a backend
@@ -77,9 +81,15 @@ optimization.
 
 -- After the backend is started, it will wait for the condition variable of map_
 update_. 
+
 -- When the map update is triggered, take the activated keyframes and map
 points from the map and perform optimization
 
+5. Q&A
+
+GTest Error:
+
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
 
 
 
