@@ -1,4 +1,4 @@
-ifndef MYSLAM_BACKEND_H
+#ifndef MYSLAM_BACKEND_H
 #define MYSLAM_BACKEND_H
 
 #include "myslam/common_include.h"

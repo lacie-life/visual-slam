@@ -27,7 +27,7 @@ inline bool triangulation(const std::vector<SE3> &poses,
     pt_world = (svd.matrixV().col(3) / svd.matrixV()(3, 3)).head<3>();
 
     if (svd.singularValues()[3] / svd.singularValues()[2] < 1e-2) {
-        // 解质量不好，放弃
+        // The solution quality is not good, give up
         return true;
     }
     return false;

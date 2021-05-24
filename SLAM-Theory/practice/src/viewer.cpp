@@ -76,7 +76,7 @@ void Viewer::ThreadLoop() {
 
 cv::Mat Viewer::PlotFrameImage() {
     cv::Mat img_out;
-    cv::cvtColor(current_frame_->left_img_, img_out, CV_GRAY2BGR);
+    cv::cvtColor(current_frame_->left_img_, img_out, cv::COLOR_GRAY2BGR);
     for (size_t i = 0; i < current_frame_->features_left_.size(); ++i) {
         if (current_frame_->features_left_[i]->map_point_.lock()) {
             auto feat = current_frame_->features_left_[i];
