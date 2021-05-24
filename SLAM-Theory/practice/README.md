@@ -85,6 +85,11 @@ update_.
 -- When the map update is triggered, take the activated keyframes and map
 points from the map and perform optimization
 
+5. Q&A
+
+GTest Error:
+
+https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
 
 
 
