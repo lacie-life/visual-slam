@@ -9,16 +9,22 @@ VisualOdometry::VisualOdometry(std::string &config_path)
 
 bool VisualOdometry::Init() {
     // read from config file
-    if (Config::SetParameterFile(config_file_path_) == false) {
-        return false;
-    }
+    std::cout << " ??? " << std::endl;
+    //if (Config::SetParameterFile(config_file_path_) == false) {
+    //    std::cout << "false" << std::endl;
+    //    return false;
+    //}
+
+    //std::cout << Config::Get<std::string>("dataset_dir") << std::endl;
 
     dataset_ =
-        Dataset::Ptr(new Dataset(Config::Get<std::string>("dataset_dir")));
+        Dataset::Ptr(new Dataset("/home/lacie/Github/data/00"));
+
     CHECK_EQ(dataset_->Init(), true);
 
     // create components and links
     frontend_ = Frontend::Ptr(new Frontend);
+
     backend_ = Backend::Ptr(new Backend);
     map_ = Map::Ptr(new Map);
     viewer_ = Viewer::Ptr(new Viewer);

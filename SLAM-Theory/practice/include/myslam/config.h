@@ -25,6 +25,8 @@ class Config {
     // access the parameter values
     template <typename T>
     static T Get(const std::string &key) {
+        std::cout << key << std::endl;
+        std::cout << T(Config::config_->file_[key]) <<  std::endl;
         return T(Config::config_->file_[key]);
     }
 };

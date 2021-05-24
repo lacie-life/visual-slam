@@ -9,16 +9,19 @@ using namespace std;
 namespace myslam {
 
 Dataset::Dataset(const std::string& dataset_path)
-    : dataset_path_(dataset_path) {}
+    : dataset_path_(dataset_path) {
+
+}
 
 bool Dataset::Init() {
     // read camera intrinsics and extrinsics
+    //std::cout << "hello vo" << std::endl;
     ifstream fin(dataset_path_ + "/calib.txt");
     if (!fin) {
         LOG(ERROR) << "cannot find " << dataset_path_ << "/calib.txt!";
         return false;
     }
-
+    std::cout << "hello vo" << std::endl;
     for (int i = 0; i < 4; ++i) {
         char camera_name[3];
         for (int k = 0; k < 3; ++k) {

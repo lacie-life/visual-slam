@@ -13,9 +13,9 @@ namespace myslam {
 
 Frontend::Frontend() {
     gftt_ =
-        cv::GFTTDetector::create(Config::Get<int>("num_features"), 0.01, 20);
-    num_features_init_ = Config::Get<int>("num_features_init");
-    num_features_ = Config::Get<int>("num_features");
+        cv::GFTTDetector::create(150, 0.01, 20);
+    num_features_init_ = 50;
+    num_features_ = 150;
 }
 
 bool Frontend::AddFrame(myslam::Frame::Ptr frame) {
