@@ -1,0 +1,2 @@
+AccelerometerSigma GyroscopeSigma IntegrationSigma AccelerometerBiasSigma GyroscopeBiasSigma AverageDeltaT
+0.102093 0.004820 0 0.003069 0.000252 0.00249995424
