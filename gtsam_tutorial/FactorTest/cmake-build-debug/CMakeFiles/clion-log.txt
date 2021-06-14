@@ -1,6 +1,0 @@
-/home/lacie/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest
--- GTSAM include directory:  /usr/local/lib/cmake/GTSAM/../../../include
--- GTSAM include directory:  /usr/local/lib/cmake/GTSAM/../../../include
--- Configuring done
--- Generating done
--- Build files have been written to: /home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug

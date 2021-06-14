@@ -1,1 +1,0 @@
-/usr/bin/c++  -march=native  -g CMakeFiles/FactorTest_run.dir/main.cpp.o -o FactorTest_run  Factor_lib/libFactor_lib.a -lgtsam -lboost_system 

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libFactor_lib.a CMakeFiles/Factor_lib.dir/PointToPlaneFactor.cpp.o CMakeFiles/Factor_lib.dir/LBLFactor.cpp.o CMakeFiles/Factor_lib.dir/PointToPlaneFactor2.cpp.o CMakeFiles/Factor_lib.dir/PointToPlaneFactor3.cpp.o
-/usr/bin/ranlib libFactor_lib.a

@@ -1,7 +1,0 @@
-/home/lacie/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/211.7142.21/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor
--- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.58") found components: serialization system filesystem thread program_options date_time timer chrono regex atomic 
--- GTSAM include directory:  /usr/local/lib/cmake/GTSAM/../../../include
--- Found Boost: /usr/include (found version "1.65.1") found components: program_options 
--- Configuring done
--- Generating done
--- Build files have been written to: /home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug
