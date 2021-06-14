@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Factor_lib"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\;CMake Files\Factor_lib\;CMake Files\gtests\;CMake Files\gtests\lib\;CMake Files\gtests\lib\googlemock\;CMake Files\gtests\lib\googlemock\cmake\;CMake Files\gtests\lib\googletest\;CMake Files\gtests\lib\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Factor_lib">
+				<Option output="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/libFactor_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 Factor_lib"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Factor_lib/fast">
+				<Option output="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/libFactor_lib.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 Factor_lib/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/cmake-build-debug/Factor_lib/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/LBLFactor.cpp">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/LBLFactor.h">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/PointToPlaneFactor.cpp">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/PointToPlaneFactor.h">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/PointToPlaneFactor2.cpp">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/PointToPlaneFactor2.h">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/PointToPlaneFactor3.cpp">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/PointToPlaneFactor3.h">
+			<Option target="Factor_lib"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/local/lib/cmake/GTSAM/GTSAM-exports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/local/lib/cmake/GTSAM/GTSAM-exports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/local/lib/cmake/GTSAM/GTSAMConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/local/lib/cmake/GTSAM/GTSAMConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/../../../../../../usr/local/lib/cmake/GTSAM/gtsam_extra.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/Factor_lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Factor_lib\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtests\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtests\lib\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtests\lib\googlemock\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\gtests\lib\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\gtests\lib\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\gtests\lib\googletest\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\gtests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\gtests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\gtests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/FactorTest/gtests/lib/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\gtests\lib\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="imuFactor"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="imuFactor">
+				<Option output="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/imuFactor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/gtsam/3rdparty/metis"/>
+					<Add directory="/usr/local/include/gtsam/3rdparty/SuiteSparse_config"/>
+					<Add directory="/usr/local/include/gtsam/3rdparty/CCOLAMD"/>
+					<Add directory="/usr/local/include/gtsam/3rdparty/Eigen"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 imuFactor"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="imuFactor/fast">
+				<Option output="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/imuFactor" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include/gtsam/3rdparty/metis"/>
+					<Add directory="/usr/local/include/gtsam/3rdparty/SuiteSparse_config"/>
+					<Add directory="/usr/local/include/gtsam/3rdparty/CCOLAMD"/>
+					<Add directory="/usr/local/include/gtsam/3rdparty/Eigen"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 imuFactor/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/src/main.cpp">
+			<Option target="imuFactor"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/../../../../../../usr/local/lib/cmake/GTSAM/GTSAM-exports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/../../../../../../usr/local/lib/cmake/GTSAM/GTSAM-exports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/../../../../../../usr/local/lib/cmake/GTSAM/GTSAMConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/../../../../../../usr/local/lib/cmake/GTSAM/GTSAMConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+		<Unit filename="/home/lacie/Github/visual-slam/gtsam_tutorial/IMUFactor/../../../../../../usr/local/lib/cmake/GTSAM/gtsam_extra.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\GTSAM\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
