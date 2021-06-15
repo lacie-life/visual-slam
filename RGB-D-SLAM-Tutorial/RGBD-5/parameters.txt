@@ -1,0 +1,38 @@
+# This is a parameter file
+# Go to your sister’s yaml! I don’t use yaml anymore! It's so simple!
+
+# parameter defined in part 4
+# Feature type
+detector=ORB
+descriptor=ORB
+# Filter the multiples of good match
+good_match_threshold=10
+
+# camera
+camera.cx=325.5;
+camera.cy=253.5;
+camera.fx=518.0;
+camera.fy=519.0;
+camera.scale=1000.0;
+
+# part 5
+# Data related
+# Starting and ending index
+start_index=1
+end_index=16
+# The directory where the data is located
+rgb_dir=/home/nguyen/Github/RGB-D-SLAM-Tutorial/RGBD-5/data/color/
+rgb_extension=.png
+depth_dir=/home/nguyen/Github/RGB-D-SLAM-Tutorial/RGBD-5/data/depth/
+depth_extension=.png
+depth_extension=.png
+# Point cloud resolution
+voxel_grid=0.01
+# Whether to visualize in real time
+visualize_pointcloud=yes
+# Minimum number of matches
+min_good_match=10
+# Minimum interior point
+min_inliers=5
+# Maximum movement error
+max_norm=0.3
