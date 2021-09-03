@@ -2,4 +2,8 @@
 
 ## Theory: Visual SLAM tutorial from SLAMBOOK
 
-## vi-slam
+## Tutorial
+
+1. RGB-D SLAM 
+2. GTSAM 
+3. 3DV
