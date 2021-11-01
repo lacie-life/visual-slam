@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ceres_mono_orb_slam2</name>
+  <version>0.0.0</version>
+  <description>The ceres_mono_orb_slam2 package</description>
+
+  <maintainer email="b51live@gmail.com">
+    b51
+  </maintainer>
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>
