@@ -1,0 +1,22 @@
+
+os: linux
+language: shell
+dist: xenial
+before_install:
+
+install: 
+
+services:
+- docker
+script:
+- docker pull hridaybavle/semantic_slam:v1
+- docker container create --name dockervm -t -i hridaybavle/semantic_slam:v1 bash
+- docker start dockervm
+- docker cp travis_build.sh dockervm:/root/
+- docker exec -it dockervm /bin/bash /root/travis_build.sh
+
+after_success:
+
+before_deploy:
+
+deploy:
