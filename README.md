@@ -1,6 +1,8 @@
 # visual-slam
 
-## Theory: Visual SLAM tutorial from SLAMBOOK
+## Theory: 
+1. Visual SLAM tutorial from SLAMBOOK
+2. Visual Navigation for Autonomous Vehicles (VNAV-MIT)
 
 ## Tutorial
 
