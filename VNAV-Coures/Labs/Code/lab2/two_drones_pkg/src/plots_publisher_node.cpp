@@ -53,6 +53,9 @@ class PlotsPublisherNode{
           *       a small wait time.    
           */
 
+         parent->tf_listener.waitForTransform(ref_frame, dest_frame, ros::Time(0), ros::Duration(10.0) );
+         parent->tf_listener.lookupTransform(ref_frame, dest_frame, ros::Time(0), transform);
+
          // ~~~~~~~~~~~~~~~~~~~~~~~~  END OF EDIT SECTION  ~~~~~~~~~~~~~~~~~~~~~~~~~
          while(poses.size() >= buffer_size)
             poses.pop_front();
