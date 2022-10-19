@@ -11,8 +11,8 @@ Please post on the Github issues page if you encounter bugs and/or have question
 
 # TODO
 
-- [x] Lab 1
-- [ ] Lab 2
+- [x] [Lab 1](https://vnav.mit.edu/labs/lab1/exercises.html)
+- [x] [Lab 2](https://vnav.mit.edu/labs/lab2/exercises.html) 
 - [ ] Lab 3
 - [ ] Lab 4
 - [ ] Lab 5
