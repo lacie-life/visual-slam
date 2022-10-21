@@ -6,4 +6,9 @@
   <node name="controller_node" pkg="controller_pkg" type="controller_node" />
 
   <!-- TODO: Copy your controller gains from lab 3 to here! -->
+  <!-- Controller gains -->
+  <param name="kx" type="double" value="10" />
+  <param name="kv" type="double" value="5" />
+  <param name="kr" type="double" value="5" />
+  <param name="komega" type="double" value="2" />
 </launch>
