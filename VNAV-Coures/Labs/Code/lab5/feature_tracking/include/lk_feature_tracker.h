@@ -41,7 +41,12 @@ class LKFeatureTracker {
 
   static constexpr const char* window_name_ = "LK";
   cv::Mat prev_frame_;
+  cv::Mat greyMat_prev_;
   std::vector<cv::Point2f> prev_corners_;
+  
+  cv::Mat mask;
+  cv::Mat mask_2;
+  int counter = 0;
 
   // Statistics
   float avg_num_keypoints_img1_ = 0;

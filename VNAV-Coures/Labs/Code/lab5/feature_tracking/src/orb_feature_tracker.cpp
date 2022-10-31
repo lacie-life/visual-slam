@@ -42,7 +42,7 @@ void OrbFeatureTracker::detectKeypoints(const cv::Mat &img,
                                          std::vector<cv::KeyPoint> *keypoints) const {
 // ~~~~ begin solution
 //
-//     **** FILL IN HERE ***
+this->detector->detect(img, *keypoints);
 //
 // ~~~~ end solution
 }
@@ -52,7 +52,7 @@ void OrbFeatureTracker::describeKeypoints(const cv::Mat &img,
                                            cv::Mat *descriptors) const {
 // ~~~~ begin solution
 //
-//     **** FILL IN HERE ***
+this->detector->compute(img, *keypoints, *descriptors);
 //
 // ~~~~ end solution
 }
@@ -63,7 +63,17 @@ void OrbFeatureTracker::matchDescriptors(const cv::Mat &descriptors_1,
                                           std::vector<cv::DMatch> *good_matches) const {
 // ~~~~ begin solution
 //
-//     **** FILL IN HERE ***
+// Brute Force Matcher
+cv::Ptr<cv::DescriptorMatcher> matcher = cv::BFMatcher::create();
+
+matcher->knnMatch(descriptors_1,descriptors_2, *matches, 2);
+
+const float ratio_thresh = 0.8f;
+
+for (auto& match : *matches){
+  if(match.size()==1 || match[0].distance< ratio_thresh * match[1].distance)
+    good_matches->push_back(match[0]);
+}
 //
 // ~~~~ end solution
 }
