@@ -59,7 +59,20 @@ void lkImageCallback(const sensor_msgs::ImageConstPtr &msg,
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  try {
+    // Convert ROS msg type to OpenCV image type.
+    cv::Mat image = cv_bridge::toCvShare(msg, "bgr8")->image;
+
+    // Visualize the image.
+    cv::imshow("view", image);
+    cv::waitKey(1);
+    //static cv::Mat prev_image = image;
+    lk_tracker->trackFeatures(image);
+    cv::waitKey(1);
+    //prev_image = image;
+  } catch (cv_bridge::Exception &e) {
+    ROS_ERROR("Could not convert from '%s' to 'bgr8'.", msg->encoding.c_str());
+  }
   //
   // ~~~~ end solution
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

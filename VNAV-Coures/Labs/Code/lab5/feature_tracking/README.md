@@ -1,5 +1,7 @@
 # Installation
 
+# Note about the version of opencv if you use custo cmakelists
+
 1. Here are some extra dependencies that you might need for this code to work:
 
 ```

@@ -52,7 +52,7 @@ void SurfFeatureTracker::detectKeypoints(const cv::Mat& img,
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  this->detector->detect(img, *keypoints);
   //
   // ~~~~ end solution
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,7 +72,7 @@ void SurfFeatureTracker::describeKeypoints(const cv::Mat& img,
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  this->detector->compute(img, *keypoints, *descriptors);
   //
   // ~~~~ end solution
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,7 +98,14 @@ void SurfFeatureTracker::matchDescriptors(
   //
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  flann_matcher.knnMatch(descriptors_1,descriptors_2, *matches, 2);
+
+  const float ratio_thresh = 0.8f;
+
+  for (auto& match : *matches){
+    if(match.size()==1 || match[0].distance< ratio_thresh * match[1].distance)
+      good_matches->push_back(match[0]);
+  }
   //
   // ~~~~ end solution
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

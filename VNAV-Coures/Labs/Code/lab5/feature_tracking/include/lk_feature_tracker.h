@@ -28,6 +28,8 @@ class LKFeatureTracker {
                              const std::vector<cv::Point2f>& pts2,
                              std::vector<uchar>* inlier_mask) const;
 
+  void printStats() const;
+
  private:
 
   /** TODO Display image with tracked features from prev to curr on the image

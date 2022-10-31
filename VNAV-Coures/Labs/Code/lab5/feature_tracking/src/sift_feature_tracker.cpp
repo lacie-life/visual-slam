@@ -26,7 +26,7 @@ void SiftFeatureTracker::detectKeypoints(const cv::Mat& img,
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  this->detector->detect(img, *keypoints);
   //     
   //     Hint: look at the header file for this class in the include folder.
   //     There is a private member of the class that you can use directly for
@@ -50,7 +50,7 @@ void SiftFeatureTracker::describeKeypoints(const cv::Mat& img,
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  this->detector->compute(img, *keypoints, *descriptors);
   //
   //     Hint: look at the header file for this class in the include folder.
   //     There is a private member of the class that you can use directly for
@@ -91,7 +91,7 @@ void SiftFeatureTracker::matchDescriptors(
   //
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  flann_matcher.knnMatch(descriptors_1,descriptors_2, *matches, 2);
   //     Hint: you should be able to do it using one function call on flann_matcher
   //
   // ~~~~ end solution
@@ -102,7 +102,14 @@ void SiftFeatureTracker::matchDescriptors(
 
   // ~~~~ begin solution
   //
-  //     **** FILL IN HERE ***
+  
+  const float ratio_thresh = 0.8f;
+
+  for (auto& match : *matches){
+    if(match.size()==1 || match[0].distance< ratio_thresh * match[1].distance)
+      good_matches->push_back(match[0]);
+  }
+
   //     Hint: you need to write a for loop that iterate through all the matches
   //     obtained from the previous step, and perform a check on it to see 
   //     whether it can go into the good_matches vector.
