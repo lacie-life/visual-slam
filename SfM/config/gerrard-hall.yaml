@@ -1,7 +1,7 @@
 %YAML:1.0
 
-images_path : "/home/lacie/Documents/workspace/resources/clomap/gerrard-hall/images"
-database_path : "/home/lacie/Documents/workspace/resources/clomap/gerrard-hall/gerrard-hall.db"
+images_path : "/home/lacie/Data/COLMAP/gerrard-hall/images"
+database_path : "/home/lacie/Data/COLMAP/gerrard-hall/gerrard-hall.db"
 
 
 SIFTextractor.max_image_size : 3200

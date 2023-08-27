@@ -12,7 +12,7 @@ using namespace SimpleSfM;
 int main(int argc, char **argv)
 {
 
-    // step2 : Match the pictures and store them in the database
+    // Step 2 : Match the pictures and store them in the database
 
     if (argc != 2)
     {

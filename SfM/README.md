@@ -34,7 +34,7 @@ This is a simple SfM pipeline that takes a set of images and outputs a 3D point 
 - [ ] Complete README
 - [ ] Full Pipeline application
 - [ ] GPU implementation
-- [ ] Add Qt GUI
+- [ ] Add Qt GUI [SimpleSfMViz](https://github.com/lacie-life/SimpleSfMViz)
 
 ## References
 

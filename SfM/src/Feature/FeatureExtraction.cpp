@@ -42,7 +42,6 @@ namespace SimpleSfM
 
     void FeatureExtractorCPU::RunExtraction()
     {
-
         Database database;
         database.Open(database_path_);
 
@@ -111,6 +110,119 @@ namespace SimpleSfM
             cv::Mat descriptors;
 
             FeatureUtils::ExtractFeature(scaled_image, scaled_kpts, descriptors, max_num_features_);
+
+            std::cout << "\t num : " << scaled_kpts.size() << std::endl;
+            ;
+            std::cout << "\t ";
+            timer.PrintSeconds();
+            std::cout << std::endl;
+
+            kpts.resize(scaled_kpts.size());
+            kpts_color.resize(scaled_kpts.size());
+            const double inv_scale_x = 1.0 / scale_x;
+            const double inv_scale_y = 1.0 / scale_y;
+            const double inv_scale_xy = (inv_scale_x + inv_scale_y) / 2.0f;
+            for (size_t i = 0; i < scaled_kpts.size(); ++i)
+            {
+                kpts[i].pt.x = scaled_kpts[i].pt.x * inv_scale_x;
+                kpts[i].pt.y = scaled_kpts[i].pt.y * inv_scale_y;
+                kpts[i].size = scaled_kpts[i].size * inv_scale_xy;
+                kpts[i].angle = scaled_kpts[i].angle;
+
+                kpts_color[i] = image.at<cv::Vec3b>(kpts[i].pt.y, kpts[i].pt.x);
+            }
+
+            if (normalization_ == Normalization::L1_ROOT)
+            {
+                L1RootNormalized(descriptors);
+            }
+            else if (normalization_ == Normalization::L2)
+            {
+                L2Normalized(descriptors);
+            }
+            else
+            {
+                assert(false);
+            }
+
+            database.WriteKeyPoints(db_image.id, kpts);
+            database.WriteKeyPointsColor(db_image.id, kpts_color);
+            database.WriteDescriptors(db_image.id, descriptors);
+
+            database.EndTransaction();
+        }
+    }
+
+    void FeatureExtractorGPU::RunExtraction()
+    {
+        Database database;
+        database.Open(database_path_);
+
+        std::vector<cv::String> images = LoadImages(images_path_);
+
+        for (size_t i = 0; i < images.size(); ++i)
+        {
+
+            Timer timer;
+            timer.Start();
+
+            const cv::String &image_path = images[i];
+            std::cout << "ExtractFeature : " << i << " ... " << std::endl;
+            std::cout << "\t " << image_path << std::endl;
+            ;
+
+            database.BeginTransaction();
+            Database::Image db_image;
+            std::string image_name = GetImageName(image_path);
+            if (!database.ExistImageByName(image_name))
+            {
+                db_image.id = i;
+                db_image.name = image_name;
+                database.WriteImage(db_image, true);
+            }
+            else
+            {
+                db_image = database.ReadImageByName(image_name);
+            }
+
+            const bool exist_keypoints = database.ExistKeyPoints(db_image.id);
+            const bool exist_descriptors = database.ExistDescriptors(db_image.id);
+            const int exist_keypoints_and_descriptor = (static_cast<int>(exist_keypoints) << 1) + static_cast<int>(exist_descriptors);
+
+            /// (1 << 1) + 1 = 3
+            /// (1 << 1) + 0 = 2
+            /// (0 << 1) + 1 = 1
+            /// (0 << 0) + 0 = 0
+            assert(exist_keypoints_and_descriptor != 1);
+            assert(exist_keypoints_and_descriptor != 2);
+            assert(exist_keypoints_and_descriptor == 0 || exist_keypoints_and_descriptor == 3);
+
+            if (exist_keypoints_and_descriptor == 3)
+            {
+                std::cout << "\t Alread exist,  continue." << std::endl;
+                database.EndTransaction();
+                continue;
+            }
+
+            cv::Mat image;
+            cv::Mat scaled_image;
+            cv::Mat gray_image;
+            image = cv::imread(image_path);
+
+            cv::cvtColor(image, gray_image, cv::COLOR_BGRA2GRAY);
+            double scale_x;
+            double scale_y;
+            ScaleImage(gray_image, scaled_image, max_image_size_, scale_x, scale_y);
+
+            int width = scaled_image.cols;
+            int height = scaled_image.rows;
+
+            std::vector<cv::KeyPoint> scaled_kpts;
+            std::vector<cv::KeyPoint> kpts;
+            std::vector<cv::Vec3b> kpts_color;
+            cv::Mat descriptors;
+
+            FeatureUtils::ExtractFeatureGPU(scaled_image, scaled_kpts, descriptors, max_num_features_);
 
             std::cout << "\t num : " << scaled_kpts.size() << std::endl;
             ;

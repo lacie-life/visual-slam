@@ -69,7 +69,7 @@ int main(int argc, char **argv)
         cv::KeyPoint::convert(kpts1, pts1);
         cv::KeyPoint::convert(kpts2, pts2);
         std::cout << image_id1 << " -- " << image_id2 << " : " << matches.second.size() << std::endl;
-        FeatureUtils::ShowMatches(cv_image1, cv_image2, pts1, pts2, matches.second, "name", 1);
+        FeatureUtils::ShowMatches(cv_image1, cv_image2, pts1, pts2, matches.second, "Matching Results", 1);
     }
 
     database.Close();

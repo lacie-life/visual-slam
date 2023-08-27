@@ -15,9 +15,9 @@ namespace SimpleSfM
         google::InitGoogleLogging("SFM Bundle Adjustment!!!");
     }
 
-////////////////////////////////////////////////////////////////////////////////
-// cost function
-////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+    // cost function
+    ////////////////////////////////////////////////////////////////////////////////
     struct BundleAutoDiffConstantFocalCostFunction
     {
         BundleAutoDiffConstantFocalCostFunction(double observed_x,
@@ -114,7 +114,7 @@ namespace SimpleSfM
         double observed_y;
     };
 
-/// Use numerical derivation for DEBUG
+    /// Use numerical derivation for DEBUG
     struct BundleNumericDiffCostFunction
     {
         BundleNumericDiffCostFunction(double observed_x, double observed_y) : observed_x(observed_x), observed_y(observed_y) {}

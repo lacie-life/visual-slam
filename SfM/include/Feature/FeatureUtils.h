@@ -31,6 +31,21 @@ namespace SimpleSfM {
                                    cv::Mat &desc,
                                    int num_features = 8024);
 
+        ////////////////////////////////////////////////////////////////////////////////
+        // Feature
+        ////////////////////////////////////////////////////////////////////////////////
+        /**
+         * Calculate the SIFTGPU feature points of the image, and the descriptor
+         *
+         * @param image : image
+         * @param pts : [output] extracted feature points
+         * @param desc : [output] extracted feature descriptor
+         */
+        static void ExtractFeatureGPU(const cv::Mat &image,
+                                   std::vector<cv::KeyPoint> &kpts,
+                                   cv::Mat &desc,
+                                   int num_features = 8024);
+
         /**
          * Sort the feature points according to the scale from large to small,
          * and extract the num_features feature points with the first scale

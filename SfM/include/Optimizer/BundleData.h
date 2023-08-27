@@ -6,6 +6,7 @@
 #define SIMPLESFM_BUNDLEDATA_H
 
 #include <opencv2/opencv.hpp>
+#include <unordered_set>
 
 #include "Utils/Types.h"
 

@@ -4,6 +4,7 @@
 
 #include <unordered_map>
 #include <opencv2/xfeatures2d.hpp>
+#include <opencv2/cudafeatures2d.hpp>
 
 #include "Feature/FeatureUtils.h"
 
@@ -32,6 +33,14 @@ namespace SimpleSfM
         kpts = top_scale_kpts;
 
         //    cv::KeyPoint::convert(top_scale_kpts, pts);
+    }
+
+    void FeatureUtils::ExtractFeatureGPU(const cv::Mat &image,
+                                         std::vector<cv::KeyPoint> &kpts,
+                                         cv::Mat &desc,
+                                         int num_features)
+    {
+//        cv::Ptr<cv::cuda::SURF_GPU> extractor;
     }
 
     void FeatureUtils::ExtractTopScaleKeyPoints(const std::vector<cv::KeyPoint> kpts,

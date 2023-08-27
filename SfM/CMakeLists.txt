@@ -3,11 +3,16 @@ project(SimpleSfM)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+link_directories(${PROJECT_SOURCE_DIR/lib})
+
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 find_package(Ceres REQUIRED)
 include_directories(${CERES_INCLUDE_DIRS})
+
+find_package (glog 0.6.0 REQUIRED)
 
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include
@@ -40,6 +45,8 @@ target_link_libraries(SimpleSfM_lib
     ${CERES_LIBRARIES}
     sqlite3
     -lpthread
+    dl
+    glog::glog
 )
 
 add_executable(SimpleSfMPipeline app/main.cpp)
@@ -49,6 +56,7 @@ target_link_libraries(SimpleSfMPipeline
     ${OpenCV_LIBS}
     sqlite3
     -lpthread
+    glog::glog
 )
 
 add_executable(FeatureExtraction app/FeatureExtraction.cpp)
@@ -57,6 +65,8 @@ target_link_libraries(FeatureExtraction
         ${OpenCV_LIBS}
         sqlite3
         -lpthread
+        dl
+        glog::glog
 )
 
 add_executable(ComputeMatches app/ComputeMatches.cpp)
@@ -65,6 +75,8 @@ target_link_libraries(ComputeMatches
         ${OpenCV_LIBS}
         sqlite3
         -lpthread
+        dl
+        glog::glog
 )
 
 add_executable(CheckMatches app/CheckMatches.cpp)
@@ -73,6 +85,8 @@ target_link_libraries(CheckMatches
         ${OpenCV_LIBS}
         sqlite3
         -lpthread
+        dl
+        glog::glog
 )
 
 add_executable(Reconstruction app/Reconstruction.cpp)
@@ -81,6 +95,8 @@ target_link_libraries(Reconstruction
         ${OpenCV_LIBS}
         sqlite3
         -lpthread
+        dl
+        glog::glog
 )
 
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/config

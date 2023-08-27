@@ -11,7 +11,7 @@ using namespace SimpleSfM;
 
 int main(int argc, char **argv)
 {
-    // step1 : Extract features and store in database
+    // Step 1 : Extract features and store in database
 
     if (argc != 2)
     {
